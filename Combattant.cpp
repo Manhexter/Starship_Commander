@@ -4,10 +4,12 @@ Combattant::Combattant()
 {
 }
 
-Combattant::Combattant(unsigned int IdCombattantInit, string NomCambattantInit, unsigned int PuissanceInit, unsigned int BouclierInit, unsigned int StructureInit, string DescriptionInit, bool DispoInit) :
+Combattant::Combattant(unsigned int IdCombattantInit, string NomCambattantInit, unsigned int PuissanceMInit, unsigned int PuissanceLInit, unsigned int BouclierInit, 
+	unsigned int StructureInit, string DescriptionInit, bool DispoInit) :
 	IdCombattant(IdCombattantInit),
 	NomCombattant(NomCambattantInit),
-	Puissance(PuissanceInit),
+	PuissanceM(PuissanceMInit),
+	PuissanceL(PuissanceLInit),
 	Bouclier(BouclierInit),
 	Structure(StructureInit),
 	Description(DescriptionInit),
@@ -30,10 +32,16 @@ string Combattant::GetNomCombattant()
 	return NomCombattant;
 }
 
-unsigned int Combattant::GetPuissance()
+unsigned int Combattant::GetPuissanceM()
 {
-	return Puissance;
+	return PuissanceM;
 }
+
+unsigned int Combattant::GetPuissanceL()
+{
+	return PuissanceL;
+}
+
 
 unsigned int Combattant::GetBouclier()
 {
@@ -65,9 +73,14 @@ void Combattant::SetNomCombattant(string NewNom)
 	NomCombattant = NewNom;
 }
 
-void Combattant::SetPuissance(unsigned int NewPuissance)
+void Combattant::SetPuissanceM(unsigned int NewPuissanceM)
 {
-	Puissance = NewPuissance;
+	PuissanceM = NewPuissanceM;
+}
+
+void Combattant::SetPuissanceL(unsigned int NewPuissanceL)
+{
+	PuissanceL = NewPuissanceL;
 }
 
 void Combattant::SetBouclier(unsigned int NewBouclier)
